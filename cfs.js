@@ -342,46 +342,46 @@
 //     alert("Maximum attempts reached\nExiting Program...")
 // }
 
-let score = 0
-let questionNumber = 1
+// let score = 0
+// let questionNumber = 1
 
-do {
-    let userAnswer;
-    switch (questionNumber) {
-        case 1:
-            userAnswer = prompt(`Question 1. What is the capital of france. ? `).toLowerCase()
-            if (userAnswer === "paris") {
-                alert("Correct!")
-                score++
-            } else {
-                alert("Incorrect")
-            }
-            break
-        case 2:
-            userAnswer = prompt(`Question 2. What is the largest mammal. ? `).toLowerCase()
-            if (userAnswer === "blue whale") {
-                alert("Correct!")
-                score++
-            } else {
-                alert("Incorrect")
-            }
-            break
-        case 3:
-            userAnswer = prompt(`Question 3. How many continents are there. ? `).toLowerCase()
-            if (userAnswer === "7" || userAnswer === "seven") {
-                alert("Correct!")
-                score++
-            } else {
-                alert("Incorrect")
-            }
-            break
+// do {
+//     let userAnswer;
+//     switch (questionNumber) {
+//         case 1:
+//             userAnswer = prompt(`Question 1. What is the capital of france. ? `).toLowerCase()
+//             if (userAnswer === "paris") {
+//                 alert("Correct!")
+//                 score++
+//             } else {
+//                 alert("Incorrect")
+//             }
+//             break
+//         case 2:
+//             userAnswer = prompt(`Question 2. What is the largest mammal. ? `).toLowerCase()
+//             if (userAnswer === "blue whale") {
+//                 alert("Correct!")
+//                 score++
+//             } else {
+//                 alert("Incorrect")
+//             }
+//             break
+//         case 3:
+//             userAnswer = prompt(`Question 3. How many continents are there. ? `).toLowerCase()
+//             if (userAnswer === "7" || userAnswer === "seven") {
+//                 alert("Correct!")
+//                 score++
+//             } else {
+//                 alert("Incorrect")
+//             }
+//             break
 
-        default:
-            alert("Invalid Question Number")
-            break
-    }
-    questionNumber++
-} while (questionNumber <= 3)
+//         default:
+//             alert("Invalid Question Number")
+//             break
+//     }
+//     questionNumber++
+// } while (questionNumber <= 3)
 
 
-alert(`Quiz Finished\nYour score is : ${score}/3`)
+// alert(`Quiz Finished\nYour score is : ${score}/3`)
