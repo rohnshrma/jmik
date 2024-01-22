@@ -57,7 +57,38 @@ var marks = [12,43,23,34,56,23,12,4534,6,34,2334]
 // marks.splice(1,4,"rohan","jmik") // index , delete count , items...
 
 
-console.log(marks.slice(2,5)) // start , end(excluding)
+// console.log(marks.slice(2,5)) // start , end(excluding)
 
 
+
+
+// console.log(marks.indexOf(12));
+// console.log(marks.indexOf(12,3));
+// console.log(marks.indexOf(127,3));
+
+
+
+// console.log(marks.every(m=>m%2==0))
+// console.log(marks.every(m=>m>5))
+
+
+// marks.reverse()
+
+
+// var x = marks.join(",")
+// var x = marks.join(" ")
+// var x = marks.join("-")
+
+// var x = 10;
+// console.log(Array.isArray(x));
+// console.log(Array.isArray(marks));
+
+
+// console.log(marks.sort());
+
+
+marks.fill(0)
 console.log(marks);
+
+
+// console.log(x);
