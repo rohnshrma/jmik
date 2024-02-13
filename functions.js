@@ -92,3 +92,62 @@
 // var s = logs()
 
 // console.log(s);
+
+
+
+
+var greeting = function () {
+    console.log("hey jmik")
+}
+
+// console.log(typeof greeting);
+
+greeting()
+
+
+var rev = function (str) {
+    var reversed = ""
+    for (var i = str.length - 1; i >= 0; i--) {
+        reversed += str[i]
+    }
+
+    console.log(reversed);
+}
+
+rev("hello jmik")
+
+
+
+
+
+
+// var add = function () {
+//     var x = parseInt(prompt("Enter the value of number 1 : "))
+//     var y = parseInt(prompt("Enter the value of number 2 : "))
+//     return x + y
+// }
+
+
+// var z = add()
+// console.log("the result is " , z);
+
+// var printDetails = function (callback) {
+//     var result = callback()
+//     console.log(`the result is ${result}`);
+// }
+
+
+// printDetails(add)
+
+
+    function lifespan(callback, average_age) {
+        var age = callback()
+        var years_left = average_age - age
+        console.log(`Years : ${years_left}\nMonths : ${years_left * 12}\nWeeks : ${years_left * 52}\nDays : ${years_left * 365}`);
+    }
+
+
+lifespan(function () {
+    var yob = parseInt(prompt("Enter your year of birth : "))
+    return new Date().getFullYear() - yob
+}, 100)

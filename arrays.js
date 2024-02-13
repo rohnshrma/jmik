@@ -5,7 +5,7 @@
 // console.log(a,b);
 
 
-var fruits = ["apple","banana","cherry","kiwi"]
+var fruits = ["apple", "banana", "cherry", "kiwi"]
 // var copy = fruits
 
 // console.log(fruits , copy);
@@ -26,7 +26,6 @@ var fruits = ["apple","banana","cherry","kiwi"]
 // console.log(fruits[1]);
 
 
-var marks = [12,43,23,34,56,23,12,4534,6,34,2334]
 
 // marks.push(1000,10000)
 
@@ -87,8 +86,62 @@ var marks = [12,43,23,34,56,23,12,4534,6,34,2334]
 // console.log(marks.sort());
 
 
-marks.fill(0)
-console.log(marks);
+// marks.fill(0)
+// console.log(marks);
 
 
 // console.log(x);
+
+
+
+// marks.forEach(function(mark,index){
+// console.log(mark,index);
+// })
+
+
+//sum,average,min,max
+
+// var sum = 0
+// marks.forEach(function(mark){
+// sum+=mark
+// })
+// var average = sum / marks.length
+// console.log(average);
+
+var marks = [12, 43, 23, 34, 56, 23, 12, 4534, 6, 34, 2334]
+
+// var max = marks[0]
+// marks.forEach(function (mark) {
+//     if (mark > max) {
+//         max = mark
+//     }
+// })
+
+// console.log(max);
+// var min = marks[0]
+// marks.forEach(function (mark) {
+//     if (mark < min) {
+//         min = mark
+//     }
+// })
+
+// console.log(min);
+
+
+var evens = []
+var odds = []
+
+marks.forEach(function (mark) {
+    if (mark % 2 == 0) {
+        evens.push(mark)
+    } else {
+        odds.push(mark)
+    }
+})
+
+
+console.log(evens);
+console.log(odds);
+
+
+// even,odds,sum,average
