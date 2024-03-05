@@ -31,24 +31,52 @@ function fetchData(callback,url){
 
 
 
-fetchData(handleRequest,"https://jsonplaceholder.typicode.com/users/1")
 
-
-
-
-function handleRequest(data , error) {
-    if(data){
-        console.log("=========================================");
-        console.log(data);
-        console.log("=========================================");
-    }
-    else if (error){
-        console.log("*****************************************");
-        console.error(error);
-        console.log("*****************************************");
-    }
+// fetchData((data , error)=>{
+//         if(data){
+//             console.log(data);
+//             fetchData((data,error)=>{
+//                 if(data){
+//                     console.log(data);
+//                     fetchData((data,error)=>{
+//                         if(data){
+//                             console.log(data);
+//                         }else if(error){
+//                             console.log(error);
+//                         }
+//                     },"https://jsonplaceholder.typicode.com/comments/1")
+//                 }else if(error){
+//                     console.log(error);
+//                 }
+//             },"https://jsonplaceholder.typicode.com/todos/1")
+//         }
+//         else if (error){
+//             console.error(error);
+//         }
+        
+//     },"https://jsonplaceholder.typicode.com/users/1")
     
-}
+
+
+
+// fetchData((data , error)=>{
+//     if(data){
+//         console.log("=========================================");
+//         console.log(data);
+//         console.log("=========================================");
+//     }
+//     else if (error){
+//         console.log("*****************************************");
+//         console.error(error);
+//         console.log("*****************************************");
+//     }
+    
+// },"https://jsonplaceholder.typicode.com/userss/1")
+
+
+
+
+// function handleRequest
 
 // callback("hello world",undefined)
 // callback(undefined,"something went wrong")
