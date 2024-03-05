@@ -110,62 +110,62 @@ var person = {
 
 
 
-function Person(name,age,gender){
-    this.person_name = name
-    this.person_age = age 
-    this.person_gender = gender
-    this.greet = ()=>{
-        console.log("hello world this is", this.person_name);
-    }
-}
+// function Person(name,age,gender){
+//     this.person_name = name
+//     this.person_age = age 
+//     this.person_gender = gender
+//     this.greet = ()=>{
+//         console.log("hello world this is", this.person_name);
+//     }
+// }
 
 
 
 
 
-var jmik  = new Person("jmik",23,"Male")
+// var jmik  = new Person("jmik",23,"Male")
 
-console.log(jmik.person_age)
-console.log(jmik.person_name)
-// jmik.greet()
+// console.log(jmik.person_age)
+// console.log(jmik.person_name)
+// // jmik.greet()
 
-// console.log(jmik.details)
+// // console.log(jmik.details)
 
-var rohan = new Person("rohan sharma",1000)
-console.log(rohan);
-
-
-Person.prototype.details = function(){
-console.log(`Name : ${this.person_name}\nAge : ${this.person_age}`)
-}
+// var rohan = new Person("rohan sharma",1000)
+// console.log(rohan);
 
 
-Person.prototype.changeYear = function(newAge){
-    this.person_age = newAge
-}
+// Person.prototype.details = function(){
+// console.log(`Name : ${this.person_name}\nAge : ${this.person_age}`)
+// }
 
 
-jmik.changeYear(100)
+// Person.prototype.changeYear = function(newAge){
+//     this.person_age = newAge
+// }
 
 
-jmik.details()
+// jmik.changeYear(100)
 
 
-console.log(jmik)
+// jmik.details()
 
 
+// console.log(jmik)
 
 
 
 
 
-function Employee(name,age,gender,jobTitle,salary){
-    Person.call(this,name,age,gender)
-    this.jobTitle = jobTitle
-    this.salary = salary 
-}
 
-var x = new Employee("john",23,"Male","Engineer",1000000)
+
+// function Employee(name,age,gender,jobTitle,salary){
+//     Person.call(this,name,age,gender)
+//     this.jobTitle = jobTitle
+//     this.salary = salary 
+// }
+
+// var x = new Employee("john",23,"Male","Engineer",1000000)
     
 // console.log(x)
 
@@ -181,54 +181,102 @@ var x = new Employee("john",23,"Male","Engineer",1000000)
 
 
 
-// Task 1
-const Product = function(name,price,quantity){ 
+// // Task 1
+// const Product = function(name,price,quantity){ 
 
-      this.name = name; 
-      this.price = price; 
-      this.quantity = quantity;
+//       this.name = name; 
+//       this.price = price; 
+//       this.quantity = quantity;
 
+// }
+// //Task 3
+// Product.prototype.calculateTotal = function(){
+//       return this.price*this.quantity; 
+// }
+
+// let newProduct = new Product("Keyboard",100,10); 
+// let newMonitor = new Product("Monitor",80,12); 
+// let newPhone = new Product("Phone",80,12); 
+// console.log(newProduct)
+// console.log(newMonitor)
+
+// //Task 5
+// Product.prototype.category = "Electronics"; 
+
+// console.log(newProduct)
+// //Task 6
+// function Book(name,price,quantity,author){ 
+//       Product.call(this,name,price,quantity,author); 
+//       this.author = "Mike"; 
+
+// }
+
+// Book.prototype = Object.create(Product.prototype)
+// Book.prototype.constructor = Book;
+// var abc = new Book("abc",12,10,"zayn")
+// console.log(abc);
+
+
+// Book.prototype.calculateTotal = function(){
+//     var total = Product.prototype.calculateTotal.call(this)
+//     // console.log((total*90)/100)
+//     console.log(total*0.9)
+// }
+// abc.calculateTotal()
+
+// //Task 9
+// Book.prototype.getAuthorInfo = function(){
+//       return `${this.author} is writing about how to code!`; 
+// }
+// let authorInfo = newBook.getAuthorInfo(); 
+// console.log(newBook);
+// console.log(authorInfo);
+
+
+// task 1
+function Animal(name,species){
+this.name = name
+this.species = species
 }
-//Task 3
-Product.prototype.calculateTotal = function(){
-      return this.price*this.quantity; 
+
+// Task 2
+const animal1 = new Animal("Lion","Feline")
+const animal2 = new Animal("Elephant","Mammal")
+const animal3 = new Animal("Snake","Reptile")
+
+
+// task 3
+Animal.prototype.introduce = function(){
+    return `I am a ${this.species} names ${this.name}`
 }
 
-let newProduct = new Product("Keyboard",100,10); 
-let newMonitor = new Product("Monitor",80,12); 
-let newPhone = new Product("Phone",80,12); 
-console.log(newProduct)
-console.log(newMonitor)
+// task 4
+// console.log(animal2.introduce())
 
-//Task 5
-Product.prototype.category = "Electronics"; 
+// task 5
+Animal.prototype.sound = "Makes Noise"
 
-console.log(newProduct)
-//Task 6
-function Book(name,price,quantity,author){ 
-      Product.call(this,name,price,quantity,author); 
-      this.author = "Mike"; 
 
+// task 6
+function Dog(name,species,breed){
+    Animal.call(this,name,species)
+    this.breed = breed
 }
 
-Book.prototype = Object.create(Product.prototype)
-Book.prototype.constructor = Book;
-var abc = new Book("abc",12,10,"zayn")
-console.log(abc);
+console.log("dog prototype => ",Dog.prototype);
+console.log("animal prototype => ",Animal.prototype);
+console.log("result of Object.create => ",Object.create(Animal.prototype));
+Dog.prototype = Object.create(Animal.prototype)
+console.log("dog prototype => ",Dog.prototype);
+Dog.prototype.constructor = Dog;
+console.log("dog prototype => ",Dog.prototype);
 
 
-Book.prototype.calculateTotal = function(){
-    var total = Product.prototype.calculateTotal.call(this)
-    console.log(total*0.9)
+
+Dog.prototype.introduce = function(){
+    return `hey my name is ${this.name}, i am a ${this.breed}!`
 }
-abc.calculateTotal()
 
-//Task 9
-Book.prototype.getAuthorInfo = function(){
-      return `${this.author} is writing about how to code!`; 
-}
-let authorInfo = newBook.getAuthorInfo(); 
-console.log(newBook);
-console.log(authorInfo);
-
-
+var tommy = new Dog("tommy","Canine","Labrador")
+console.log(tommy.sound);
+console.log(tommy.introduce())
