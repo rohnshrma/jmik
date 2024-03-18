@@ -55,3 +55,83 @@
 //     .catch(err => {
 //         console.log(err);
 //     })
+
+
+
+
+// reject => 
+// resolve =>
+
+
+// var myName = prompt("Enter your name : ")
+
+// // store promise in a variable
+// var myPromise = new Promise(function(resolve,reject){
+
+//     setTimeout(()=>{
+//         if(myName.length >= 3){
+//             resolve(`${myName} is welcomed.`)
+//         }else{
+//             reject(`${myName} is not an actual name!`)
+//         }
+//     },5000)
+
+// })
+
+
+// myPromise
+// .then(data=>{
+//     console.log(data);
+// })
+// .catch(err=>{
+//     console.log(err);
+// })
+
+
+
+// 
+
+function yourPromise(){
+    var myName = prompt("Enter your name : ")
+    return new Promise(function(resolve,reject){
+    
+        setTimeout(()=>{
+            if(myName.length >= 3){
+                resolve(`${myName} is welcomed.`)
+            }else{
+                reject(`${myName} is not an actual name!`)
+            }
+        },5000)
+    
+    })
+}
+
+yourPromise()
+.then(data=>{
+    console.log(data);
+    yourPromise()
+    .then(data=>{
+        console.log(data);
+        yourPromise()
+        .then(data=>{
+            console.log(data);
+            yourPromise()
+            .then(data=>{
+                console.log(data);
+            })
+        
+        })
+    
+    })
+
+})
+.catch(err=>{
+    console.log(err);
+})
+
+
+
+
+
+// create a function called getWeatherInfo which takes the city name as parameter
+// and returns a "Promise" shows the weather data of that city if resolved else shows "data not found". 
