@@ -42,3 +42,16 @@
 // })
 
 
+
+// fetch
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=3ed1a8944ae36bde087adc8f67d0f04a&units=metric`)
+//     .then(response => {
+//         response.json()
+//             .then(data => {
+//                 console.log(data);
+//             })
+
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     })
