@@ -95,3 +95,21 @@ var head_one = document.getElementById("head")
 // head_one.addEventListener("mouseenter",(e)=>{
 //     console.log("entering");
 // })
+
+
+// select a parent
+const boxes = document.getElementById("boxes")
+console.log(boxes);
+
+// creating a new element
+var newBox = document.createElement("div")
+newBox.textContent = "new box"
+newBox.style = "height:100px;width:100px;border:1px solid black;"
+
+boxes.appendChild(newBox)
+
+
+// select the element to be removed
+var b2 = document.getElementsByClassName("b2")[0]
+
+boxes.removeChild(b2)
