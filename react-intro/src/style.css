@@ -1,0 +1,20 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+}
+.Card{
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 4px 0 #000;
+    border-radius: 10px;
+}
+.Card img{
+    width:150px;
+    border-radius:50%;
+}
