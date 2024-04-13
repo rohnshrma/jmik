@@ -14,8 +14,27 @@
     background-color: lightcyan;
     display: flex;
 }
+.features .card{
+    width:30%;
+}
 
 .features .card img {
     width: 50px;
 
+}
+.pricing{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.pricing .row{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.pricingCard{
+    border-radius: 10px;
+    box-shadow:0 0 4px 0 #000;
+    padding:1rem;
+    width:25%;
 }
