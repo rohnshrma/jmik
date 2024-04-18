@@ -4,6 +4,9 @@ import Card from "./Card"
 import Counter from './Counter'
 
 const App = () => {
+
+  console.log("rendering app");
+
   return (
     <div>Counter
     {/* <Card name='joe martin' email="joe@email.com" phone="467876567" imgUrl='https://static.vecteezy.com/system/resources/previews/022/484/651/non_2x/happy-3d-student-boy-with-books-on-white-background-transparent-background-free-png.png' />
