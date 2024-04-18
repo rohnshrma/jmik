@@ -5,6 +5,7 @@ body{
     align-items: center;
     justify-content: center;
     background: lightblue;
+    text-align: center;
 }
 .Card{
     padding: 1rem;
@@ -17,4 +18,11 @@ body{
 .Card img{
     width:150px;
     border-radius:50%;
+} 
+button{
+    padding: 10px 12px;
+    border-color: transparent;
+    background-color: teal;
+    color:#fff;
+    text-align: center;
 }
