@@ -2,26 +2,20 @@ import React, { useState } from 'react'
 
 const RandomBackgroundGenerator = () => {
 
+    const red = Math.floor(Math.random() * 256)
+    const green = Math.floor(Math.random() * 256)
+    const blue = Math.floor(Math.random() * 256)
 
-    const [color,setColor] = useState("Color Goes here")
+    console.log(red,green,blue);
 
-    function generateColor() {
-        var red = Math.floor(Math.random() * 256)
-        var green = Math.floor(Math.random() * 256)
-        var blue = Math.floor(Math.random() * 256)
+    const [color,setColor] = useState("")
 
-        return `rgb(${red},${green},${blue})`
-
+    const clickHandler = ()=>{
+        setColor(`rgb(${red},${green},${blue})`)
     }
 
 
-
-    var clickHandler= ()=>{
-        var newColor = generateColor()
-        setColor(newColor)
-        console.log(color);
-    }
-
+    console.log(color);
 
     return (
         <div className='rbg' style={{ "backgroundColor": color }} >
